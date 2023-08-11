@@ -1,0 +1,24 @@
+<!-- doctor_management/views/doctor_view.xml -->
+
+<odoo>
+    <data>
+
+        <menuitem id="menu_doctor_root" name="Doctor" sequence="185"/>
+
+        <menuitem
+            id="menu_doctor_registration"
+            name="Registration"
+            parent="menu_doctor_root"
+            sequence="0"/>
+
+        <menuitem
+            id="menu_doctor_app"
+            name="Doctor"
+            action="action_doctor"
+            parent="menu_doctor_registration"
+            sequence="1"/>
+
+    </data>
+</odoo>
+
+
