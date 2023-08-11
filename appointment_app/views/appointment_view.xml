@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <record id="view_appointment_form" model="ir.ui.view">
+            <field name="name">appointment.appointment.form</field>
+            <field name="model">appointment.appointment</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="patient" widget="many2many_tags"/>
+                            <field name="appointment_date"/>
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for Appointment -->
+        <record id="view_appointment_tree" model="ir.ui.view">
+            <field name="name">appointment.appointment.tree</field>
+            <field name="model">appointment.appointment</field>
+            <field name="arch" type="xml">
+                <tree string="Appointments">
+                    <field name="name"/>
+                    <field name="patient"/>
+                    <field name="appointment_date"/>
+                    <field name="notes"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_appointment" model="ir.actions.act_window">
+            <field name="name">Appointments</field>
+            <field name="res_model">appointment.appointment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_appointment" name="Appointments" sequence="30"/>
+        <menuitem id="menu_appointment_list" name="Appointment List" parent="menu_appointment" action="action_appointment"/>
+    </data>
+</odoo>
