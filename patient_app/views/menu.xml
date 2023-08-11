@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem
+            id="menu_patient_root"
+            name="Patient"
+            sequence="185"/>
+
+        <menuitem
+            id="menu_patient_registration"
+            name="Registration"
+            parent="menu_patient_root"
+            sequence="0"/>
+
+            <menuitem
+                id="menu_patient_app"
+                name="Patient"
+                action="action_patient_app"
+                parent="menu_patient_registration"
+                sequence="1"/>
+
+    </data>
+</odoo>
+
