@@ -6,7 +6,7 @@ class Patient(models.Model):
     
     _name = 'patient.app'
     _description = 'Patient Information'
-    _res_name='patient_name'
+    _rec_name='patient_name'
     # _inherit = 'res.partner'
 
     # Auto-incremental patient identifier
